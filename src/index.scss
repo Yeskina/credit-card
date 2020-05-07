@@ -1,0 +1,167 @@
+@import-normalize;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(122, 206, 206, 0.801);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 620px;
+  width: 570px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Source Sans Pro', sans-serif;
+  align-items: center;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.card-container {
+  display: flex;
+  height: 220px;
+  width: 370px;
+  background-image: url(./images/54856614-abstract-vector-background-for-use-in-design.jpg);
+  justify-content: center;
+  align-items: center;
+
+  .card-item-wrapper {
+    height: 180px;
+    width: 340px;
+
+    .card-item-top {
+      display: flex;
+      height: 60px;
+      width: 340px;
+
+      .card-item-chip {
+        background-image: url(./images/chip.png);
+        width: 60px;
+        height: 49px;
+      }
+
+      .card-type {
+        text-align: end;
+        width: 280px;
+        height: 49px;
+      }
+    }
+
+    .card-item-number {
+      height: 60px;
+      width: 340px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .numbers {
+        font-weight: 500px;
+        font-size: 27px;
+        align-items: center;
+      }
+    }
+
+    .card-item-bottom {
+      height: 60px;
+      width: 340px;
+      display: flex;
+      font-size: 14px;
+
+      .card-holder-name {
+        height: 60px;
+        width: 250px;
+      }
+
+      .card-date {
+        height: 60px;
+        width: 90px;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  height: 55px;
+  background: #2364d2;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.input-field-1 {
+  height: 40px;
+  width: 100%;
+  opacity: 0.8;
+}
+.input-field-number {
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.smaller-container {
+  width: 80%;
+  padding-top: 35px;
+
+  .card-input {
+    margin-bottom: 20px;
+  }
+
+  .container-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .list {
+    width: 110px;
+    height: 40px;
+    background-color: white;
+  }
+}
+
+.date {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 40px;
+  .expiration-date {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #months {
+    margin-right: 15px;
+  }
+}
+
+input,
+select {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid #ced6e0;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  padding: 5px 15px;
+  background: none;
+  color: #1a3b5d;
+}
