@@ -1,9 +1,7 @@
 import React from 'react'
-import CreditCard from './credit-card'
+import CreditCard from './CreditCard'
 
-import '../index.scss'
-
-export default class Card extends React.Component {
+export default class CreditCardForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -13,18 +11,17 @@ export default class Card extends React.Component {
       month: 'Month',
       year: 'Year',
     }
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(event) {
-    this.setState({ [event.target.getAttribute('name')]: event.target.value })
+  handleInputChange = ({ target }) => {
+    this.setState({ [target.getAttribute('name')]: target.value })
   }
 
   render() {
     return (
-      <div className="container">
+      <section className="container">
         <CreditCard number={this.state.number} name={this.state.name} date={this.state.date} />
-        <div className="smaller-container">
+        <div className="form-container">
           <div className="card-input">
             <label>
               Card number:
@@ -33,7 +30,7 @@ export default class Card extends React.Component {
                 className="input-field"
                 type="text"
                 value={this.state.number}
-                onChange={this.handleChange}
+                onChange={this.handleInputChange}
               />
             </label>
           </div>
@@ -45,7 +42,7 @@ export default class Card extends React.Component {
                 className="input-field"
                 type="text"
                 value={this.state.name}
-                onChange={this.handleChange}
+                onChange={this.handleInputChange}
               />
             </label>
           </div>
@@ -60,7 +57,7 @@ export default class Card extends React.Component {
                 id="months"
                 className="list"
                 value={this.state.month}
-                onChange={this.handleChange}
+                onChange={this.handleInputChange}
               >
                 <option value="month">Month</option>
                 <option value="january">January</option>
@@ -80,7 +77,7 @@ export default class Card extends React.Component {
                 name="year"
                 className="list"
                 value={this.state.year}
-                onChange={this.handleChange}
+                onChange={this.handleInputChange}
               >
                 <option value="year">Year</option>
                 <option value="2021">2021</option>
@@ -97,13 +94,13 @@ export default class Card extends React.Component {
                 className="list"
                 type="text"
                 value={this.state.code}
-                onChange={this.handleChange}
+                onChange={this.handleInputChange}
               />
             </label>
           </div>
           <input className="button" type="submit" value="Submit" />
         </div>
-      </div>
+      </section>
     )
   }
 }

@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import Card from './components/card'
+import CreditCardForm from './components/CreditCardForm'
 
-ReactDOM.render(<Card />, document.getElementById('root'))
+import './index.scss'
 
-
+ReactDOM.render(<CreditCardForm />, document.getElementById('root'))
